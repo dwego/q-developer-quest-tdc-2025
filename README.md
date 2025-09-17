@@ -1,4 +1,4 @@
-# Quem Disse? - Jogo Multiplayer Local
+# q-developer-quest-tdc-2025
 
 Um jogo divertido e interativo onde os jogadores adivinham quem escreveu cada frase.
 
