@@ -38,6 +38,24 @@ Abra o arquivo `index.html` em qualquer navegador web moderno.
 - ⚠️ Tela de vitória (funcional)
 - ⚠️ Atualização de placar (funcional)
 
+## Resumo do Projeto
+
+🎮 **Jogo Multiplayer Local** desenvolvido com tecnologias web nativas, incluindo:
+
+- 📱 **Interface Responsiva**: Funciona em desktop e mobile
+- 🧪 **Testes Automatizados**: 5/7 testes E2E com Playwright
+- ☁️ **Deploy na AWS**: Terraform + CloudFormation
+- 💰 **Baixo Custo**: A partir de $0.95/mês
+- 🚀 **Deploy Automatizado**: Script one-click
+- 📄 **Documentação Completa**: Arquitetura e fluxos
+
+### Características Técnicas
+- **Zero Dependencies**: Apenas tecnologias web nativas
+- **Multiplayer Local**: Todos jogam no mesmo dispositivo  
+- **Responsivo**: Funciona em qualquer tela
+- **Performante**: CDN global com CloudFront
+- **Escalável**: Arquitetura serverless na AWS
+
 ## Testes E2E
 
 O projeto inclui testes E2E automatizados usando Playwright:
@@ -100,16 +118,49 @@ aws s3 cp script.js s3://BUCKET_NAME/
 ### Arquitetura AWS
 - **S3**: Hospedagem estática dos arquivos
 - **CloudFront**: CDN global para performance
-- **Custo**: ~$0.50/mês para baixo tráfego
 
-## Tecnologias
+### Estimativa de Custos (Região us-east-1)
 
-- HTML5
-- CSS3
-- JavaScript
-- Playwright (testes E2E)
-- AWS S3 + CloudFront
-- Terraform + CloudFormation
+| Serviço | Uso Estimado | Custo Mensal |
+|---------|--------------|-------------|
+| **S3 Standard** | 1 GB armazenamento | $0.023 |
+| **S3 Requests** | 10.000 GET requests | $0.004 |
+| **CloudFront** | 10 GB transferência | $0.85 |
+| **CloudFront Requests** | 100.000 requests | $0.075 |
+| **Route 53** (opcional) | 1 hosted zone | $0.50 |
+| | | |
+| **Total sem domínio** | | **~$0.95/mês** |
+| **Total com domínio** | | **~$1.45/mês** |
+
+**Cenários de uso:**
+- **Desenvolvimento/Teste**: $0.10-0.50/mês
+- **Baixo tráfego** (< 1.000 usuários/mês): $0.50-2.00/mês  
+- **Médio tráfego** (< 10.000 usuários/mês): $2.00-10.00/mês
+- **Alto tráfego** (> 50.000 usuários/mês): $10.00-50.00/mês
+
+> 💡 **Dica**: Use o [AWS Pricing Calculator](https://calculator.aws) para estimativas personalizadas
+
+## Stack Tecnológico
+
+### Frontend
+- **HTML5**: Estrutura semântica
+- **CSS3**: Flexbox, Grid, Gradients
+- **JavaScript ES6+**: Classes, Arrow Functions
+
+### Testes
+- **Playwright**: Testes E2E automatizados
+- **Coverage**: 5/7 cenários principais
+
+### Infraestrutura
+- **AWS S3**: Hospedagem estática
+- **AWS CloudFront**: CDN global
+- **Terraform**: Infrastructure as Code
+- **CloudFormation**: Template alternativo
+
+### DevOps
+- **Git**: Controle de versão
+- **GitHub**: Repositório remoto
+- **Scripts**: Deploy automatizado
 
 ## Prompts:
 
