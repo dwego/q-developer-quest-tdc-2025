@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Disse? - Jogo Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quem Disse?</h1>
+        
+        <!-- Tela de Configuração -->
+        <div id="setup-screen" class="screen active">
+            <h2>Configuração do Jogo</h2>
+            <div class="players-setup">
+                <label>Número de jogadores (2-8):</label>
+                <input type="number" id="player-count" min="2" max="8" value="3">
+                <button onclick="setupPlayers()">Configurar Jogadores</button>
+            </div>
+            <div id="player-names" class="hidden">
+                <h3>Nomes dos Jogadores:</h3>
+                <div id="name-inputs"></div>
+                <button onclick="startGame()">Iniciar Jogo</button>
+            </div>
+        </div>
+
+        <!-- Tela de Escrita -->
+        <div id="writing-screen" class="screen">
+            <h2>Fase 1 - Escrita de Frases</h2>
+            <div id="current-writer">
+                <h3>Vez de: <span id="writer-name"></span></h3>
+                <p>Escreva uma frase criativa e original:</p>
+                <textarea id="sentence-input" placeholder="Digite sua frase aqui..."></textarea>
+                <button onclick="submitSentence()">Enviar Frase</button>
+            </div>
+        </div>
+
+        <!-- Tela de Adivinhação -->
+        <div id="guessing-screen" class="screen">
+            <h2>Fase 2 - Adivinhação</h2>
+            <div class="sentence-display">
+                <h3>Quem escreveu esta frase?</h3>
+                <div id="current-sentence"></div>
+            </div>
+            <div class="voting">
+                <h4>Votem em quem acham que escreveu:</h4>
+                <div id="player-options"></div>
+                <button onclick="submitGuess()">Confirmar Voto</button>
+            </div>
+        </div>
+
+        <!-- Tela de Resultado -->
+        <div id="result-screen" class="screen">
+            <h2>Resultado da Rodada</h2>
+            <div id="round-result"></div>
+            <div id="scoreboard"></div>
+            <div class="actions">
+                <button onclick="nextRound()">Próxima Rodada</button>
+                <button onclick="restartGame()">Reiniciar Jogo</button>
+            </div>
+        </div>
+
+        <!-- Tela de Vitória -->
+        <div id="victory-screen" class="screen">
+            <h2>🎉 Fim de Jogo! 🎉</h2>
+            <div id="winner-announcement"></div>
+            <button onclick="restartGame()">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
