@@ -1,0 +1,25 @@
+{
+  "project": {
+    "name": "quem-disse-game",
+    "type": "web-application",
+    "framework": "vanilla-js"
+  },
+  "aws": {
+    "services": ["s3", "cloudfront"],
+    "deployment": {
+      "type": "static-website",
+      "methods": ["terraform", "cloudformation"]
+    }
+  },
+  "testing": {
+    "e2e": {
+      "framework": "playwright",
+      "coverage": "5/7 tests passing"
+    }
+  },
+  "architecture": {
+    "frontend": "HTML5 + CSS3 + JavaScript",
+    "hosting": "S3 + CloudFront",
+    "cdn": "CloudFront"
+  }
+}

@@ -49,12 +49,67 @@ npm run install:playwright
 npm run test:e2e
 ```
 
+## Deploy na AWS
+
+O projeto inclui configuração IaC para deploy na AWS usando S3 + CloudFront:
+
+### Pré-requisitos
+```bash
+# Instalar AWS CLI
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+# Configurar credenciais
+aws configure
+
+# Instalar Terraform (opcional)
+wget https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
+unzip terraform_1.6.0_linux_amd64.zip
+sudo mv terraform /usr/local/bin/
+```
+
+### Deploy Automatizado
+```bash
+# Script interativo de deploy
+./deploy.sh
+```
+
+### Deploy Manual
+
+**Opção 1: Terraform**
+```bash
+cd terraform
+terraform init
+terraform plan
+terraform apply
+```
+
+**Opção 2: CloudFormation**
+```bash
+aws cloudformation deploy \
+  --template-file cloudformation/template.yaml \
+  --stack-name quem-disse-game-stack
+
+# Upload dos arquivos
+aws s3 cp index.html s3://BUCKET_NAME/
+aws s3 cp style.css s3://BUCKET_NAME/
+aws s3 cp script.js s3://BUCKET_NAME/
+```
+
+### Arquitetura AWS
+- **S3**: Hospedagem estática dos arquivos
+- **CloudFront**: CDN global para performance
+- **Custo**: ~$0.50/mês para baixo tráfego
+
 ## Tecnologias
 
 - HTML5
 - CSS3
 - JavaScript
 - Playwright (testes E2E)
+- AWS S3 + CloudFront
+- Terraform + CloudFormation
 
 ## Prompts:
 
