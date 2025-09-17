@@ -1,0 +1,101 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" etag="xxx" version="22.1.16" type="device">
+  <diagram name="Arquitetura" id="architecture">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Frontend Layer -->
+        <mxCell id="2" value="Frontend (Browser)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="700" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- HTML -->
+        <mxCell id="3" value="index.html&#xa;Interface Principal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- CSS -->
+        <mxCell id="4" value="style.css&#xa;Estilos Visuais" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="240" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- JavaScript -->
+        <mxCell id="5" value="script.js&#xa;Lógica do Jogo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Game Rules -->
+        <mxCell id="6" value="game_rules.md&#xa;Regras do Jogo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Game Class -->
+        <mxCell id="7" value="QuemDisseGame Class" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="220" width="220" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Game States -->
+        <mxCell id="8" value="Setup Screen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="9" value="Writing Screen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="10" value="Guessing Screen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="320" y="300" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="11" value="Result Screen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="440" y="300" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="12" value="Victory Screen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="560" y="300" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Data Structure -->
+        <mxCell id="13" value="Estrutura de Dados" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="580" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="14" value="players[]&#xa;• name&#xa;• score (5 inicial)&#xa;• sentences[]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="100" y="450" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="15" value="sentences[]&#xa;• text&#xa;• author" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="250" y="450" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="16" value="gameState&#xa;• currentWriterIndex&#xa;• currentSentenceIndex&#xa;• selectedPlayer&#xa;• round" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="450" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrows -->
+        <mxCell id="17" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="3" target="7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="5" target="7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="7" target="13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="320" as="sourcePoint" />
+            <mxPoint x="440" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
