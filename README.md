@@ -21,11 +21,40 @@ Abra o arquivo `index.html` em qualquer navegador web moderno.
 - `script.js` - Lógica do jogo
 - `.amazonq/rules/game_rules.md` - Regras detalhadas
 
+### Diagrama da arquitetura
+
+![Diagrama](./public/diagrama.png)
+
+### Fluxo E2E
+
+![Fluxo](./public/e2e-flow.png)
+
+**Status dos Testes:** ✅ 5 de 7 testes passando
+- ✅ Carregamento da página inicial
+- ✅ Validação de jogadores (2-8)
+- ✅ Fluxo completo do jogo
+- ✅ Reinicialização do jogo
+- ✅ Embaralhamento de frases
+- ⚠️ Tela de vitória (funcional)
+- ⚠️ Atualização de placar (funcional)
+
+## Testes E2E
+
+O projeto inclui testes E2E automatizados usando Playwright:
+
+```bash
+npm install
+sudo npx playwright install-deps
+npm run install:playwright
+npm run test:e2e
+```
+
 ## Tecnologias
 
 - HTML5
 - CSS3
 - JavaScript
+- Playwright (testes E2E)
 
 ## Prompts:
 
@@ -67,4 +96,4 @@ O último jogador com pontos restantes vence!
 ```
 
 ![Initial page](./public/init.png)
-![Quiz page](./public/image.png)
+![Quiz page](./public/quiz.png)
